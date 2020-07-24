@@ -35,7 +35,7 @@ def getgeocoordinate(data ):
 
 
 def getmetadata(full_path:str):  
-    path = full_path  #Path to the image or video
+    path = dl_img(full_path)  #Path to the image or video
     image = Image.open(path) #Read The image data using PIL   
     exifdata = image.getexif() # Extract EXIF data , getexif return image metadata
     #Fiel names on exifdata are just IDs ! Prb : So , We need TAGS dictionary from PLI.ExifTags : maps each tag IDs into text
